@@ -1,1 +1,43 @@
 /* You can add global styles to this file, and also import other style files */
+@import url('https://fonts.googleapis.com/css2?family=Kanit&family=Kenia&family=Lobster&family=Patua+One&family=Poppins:wght@400;500;600&family=Roboto&family=Rubik+80s+Fade&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Poppins', sans-serif;
+}
+
+.card-img-top{
+    width: 200px;
+    height: 250px;
+    transition: 0.3s;
+}
+
+.card-img-top:hover{
+   transform: scale(1.1);
+   transition: 0.3s;
+}
+
+.navbar{
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    top: 0;
+}
+
+.all{
+    margin: 50px;
+}
+
+.cart1{
+    margin: 100px;
+}
+
+.footer{
+    width: 100%;
+
+}
