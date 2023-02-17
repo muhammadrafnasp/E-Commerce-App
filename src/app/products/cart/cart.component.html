@@ -5,7 +5,7 @@
 <div class="container text-center mt-5" style="height: 72vh;" *ngIf="cartitem.length==0">
     <div class="row">
         <div class="col">
-            <img src="https://www.clickbazar.com/Images/empty-cart.gif" alt="" width="50%" height="50%">
+            <img class="mt-5" src="https://www.clickbazar.com/Images/empty-cart.gif" alt="" width="45%" height="45%">
                 <h3 class="m-3">Your Cart is Empty</h3>
             <button class="btn btn-primary" routerLink="/">Shop Now</button>
         </div>
@@ -33,7 +33,7 @@
                     <tr *ngFor="let products of cartitem, let i=index">
                         <td class="border border-2 border-secondary">{{i+1}}</td>
                         <td class="border border-2 border-secondary">{{products.title}}</td>
-                        <td class="border border-2 border-secondary"><img [src]=products.image alt="" width="100%" height="150px"></td>
+                        <td class="border border-2 border-secondary"><img [src]=products.image alt="" width="100px" height="150px"></td>
                         <td class="border border-2 border-secondary">{{products.description}}</td>
                         <td class="border border-2 border-secondary">${{products.price}}</td>
                         <td class="border border-2 border-secondary"><i (click)="removecart(products)" class="fa-solid fa-trash text-danger"></i></td>
@@ -72,16 +72,16 @@
          </form>
         </div>
 
-        <h3>Discounts</h3>
+        <h3 class="ms-3">Discounts</h3>
         <div [ngSwitch]="grand" class="coupon">
-            <img (click)="discount5per()"  *ngSwitchCase="5" src="https://www.shutterstock.com/image-vector/5-coupon-promotion-sale-website-260nw-2039676701.jpg" alt="" width="80px">
+            <img (click)="discount5per($event.target)"  *ngSwitchCase="5" src="https://www.shutterstock.com/image-vector/5-coupon-promotion-sale-website-260nw-2039676701.jpg" alt="" width="80px">
             <img (click)="discount10per()" *ngSwitchCase="10" src="https://www.shutterstock.com/image-vector/10-euro-coupon-promotion-sale-260nw-2040328955.jpg" alt="" width="80px">
             <img (click)="discount50per()" *ngSwitchCase="50" src="" alt="https://www.shutterstock.com/image-vector/50-coupon-promotion-sale-website-260nw-2039676860.jpg" width="80px">
-            <img (click)="discount5per()"  *ngSwitchDefault="5" src="https://www.shutterstock.com/image-vector/5-coupon-promotion-sale-website-260nw-2039676701.jpg" alt="" width="80px">
+            <img class="ms-2" (click)="discount5per($event.target)"  *ngSwitchDefault="5" src="https://media.istockphoto.com/id/1136155337/vector/promo-code-coupon-code-flat-vector-set-design-illustration-on-white-background.jpg?s=612x612&w=0&k=20&c=sM95EWp2rPqPfp0pGxKi4Jkjgz-0buvGtSSZkNQYIao=" alt="" width="80px">
         </div>
        
        <div>
-         <b>Your Grand Total: {{updatedgrand}}</b>
+         <b class="ms-3">Your Grand Total: {{updatedgrand}}</b>
        </div>
 
         <div class="modal-footer">

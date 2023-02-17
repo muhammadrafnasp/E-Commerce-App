@@ -31,7 +31,8 @@ export class WishlistComponent implements OnInit {
     this.api.deletewish(prducts.id).subscribe(
       (result: any) => {
         alert(result.message)
-        this.router.navigateByUrl('wishlist')//automatic refresh
+        window.location.reload()
+        // this.router.navigateByUrl('wishlist')//automatic refresh
         this.wishlist = result.wishlist
         if(this.wishlist.length==0){
           this.eMsg="Empty wishlist"

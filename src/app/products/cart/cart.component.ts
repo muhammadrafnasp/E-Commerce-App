@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { CartService } from '../cart.service';
+import party from "party-js";
 
 @Component({
   selector: 'app-cart',
@@ -34,7 +35,8 @@ export class CartComponent implements OnInit {
   }
 
   //discount
-  discount5per(){
+  discount5per(source:any){
+    party.confetti(source)
     let discount = (this.grand*5)/100
     this.updatedgrand=this.grand - discount;
   }
